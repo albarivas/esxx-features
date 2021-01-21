@@ -1,0 +1,16 @@
+<template>
+  <c-feature-container
+    feature="Promise.prototype.finally() - ES2018 (ES9)"
+    onclick={promiseFinally}
+    warning="true"
+  >
+    <!-- prettier-ignore -->
+    <p>
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally"
+      target="_blank">finally()</a> method returns a Promise. When the promise is settled, i.e either fulfilled or rejected, 
+      the specified callback function is executed. This provides a way for code to be run whether the promise was 
+      fulfilled successfully or rejected once the Promise has been dealt with.
+      Open <strong>promiseFinally.js</strong> on the developer tools to check how it works.
+  </p>
+  </c-feature-container>
+</template>

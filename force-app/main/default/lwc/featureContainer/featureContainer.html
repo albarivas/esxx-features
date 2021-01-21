@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title={feature}>
+    <div class="slds-p-around_small"><slot></slot></div>
+    <lightning-button
+      label="Execute Sample Function"
+      onclick={handleClick}
+      slot="actions"
+    ></lightning-button>
+    <template if:true={warning}>
+      <div class="slds-p-around_small">
+        <c-warning></c-warning>
+      </div>
+    </template>
+  </lightning-card>
+</template>
