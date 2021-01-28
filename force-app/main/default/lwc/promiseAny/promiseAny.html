@@ -1,0 +1,19 @@
+<template>
+  <c-feature-container
+    feature="Promise.any() - ES2021 (ES12)"
+    code={code}
+    onclick={promiseAny}
+    warning="We don't provide a pollyfil for this feature"
+  >
+    <!-- prettier-ignore -->
+    <p>
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"
+      target="_blank">promiseAny()</a> takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, 
+      returns a single promise that resolves with the value from that promise. If all of the given promises are rejected, 
+      then the returned promise is rejected with
+      an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError"
+      target="_blank">AggregateError</a>.
+      Open <strong>promiseAny.js</strong> on the developer tools to check how it works.
+  </p>
+  </c-feature-container>
+</template>

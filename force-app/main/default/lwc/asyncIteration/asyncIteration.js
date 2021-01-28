@@ -18,4 +18,8 @@ export default class AsyncIteration extends LightningElement {
         Appy
     */
   }
+
+  get code() {
+    return this.asyncIteration.toString();
+  }
 }

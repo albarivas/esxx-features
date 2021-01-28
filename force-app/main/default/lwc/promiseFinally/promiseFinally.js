@@ -2,12 +2,12 @@ import { LightningElement } from "lwc";
 
 export default class PromiseFinally extends LightningElement {
   promiseFinally() {
-    Promise.resolve("Salesforce characters are super fun!")
+    Promise.resolve("Salesforce mascots are super fun!")
       .then((value) => console.log(value))
       .catch((error) => console.error(error))
       .finally(() => console.log("Yes, they definitely are"));
     /* expected output:
-        Salesforce characters are super fun!
+        Salesforce mascots are super fun!
         Yes, they definitely are
     */
 
@@ -19,5 +19,9 @@ export default class PromiseFinally extends LightningElement {
         error - Learning new JavaScript features is hard
         I hope these examples help you!
     */
+  }
+
+  get code() {
+    return this.promiseFinally.toString();
   }
 }

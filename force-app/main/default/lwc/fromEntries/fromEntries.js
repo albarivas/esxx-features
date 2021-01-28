@@ -13,4 +13,8 @@ export default class FromEntries extends LightningElement {
     console.log(obj);
     // expected output: Object { name: "Astro", age: 5, hobbies: ["dancing", "hiking"] }
   }
+
+  get code() {
+    return this.fromEntries.toString();
+  }
 }

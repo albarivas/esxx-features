@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>ESXX_Features</application>
@@ -7,7 +7,19 @@
     <hasActivationRequired>false</hasActivationRequired>
     <label>ESXX Features</label>
     <tabSettings>
-        <tab>ESXX_Features</tab>
+        <tab>ES2018_ES9</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>ES2019_ES10</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>ES2020_ES11</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>ES2021_ES12</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>

@@ -1,14 +1,18 @@
 <template>
   <lightning-card title={feature}>
-    <div class="slds-p-around_small"><slot></slot></div>
+    <div class="slds-p-around_small">
+      <slot></slot>
+      <pre>
+        <code lwc:dom="manual" class="language-javascript line-numbers"> </code>
+      </pre>
+    </div>
     <lightning-button
       label="Execute Sample Function"
-      onclick={handleClick}
       slot="actions"
     ></lightning-button>
     <template if:true={warning}>
       <div class="slds-p-around_small">
-        <c-warning></c-warning>
+        <c-warning warning={warning}></c-warning>
       </div>
     </template>
   </lightning-card>

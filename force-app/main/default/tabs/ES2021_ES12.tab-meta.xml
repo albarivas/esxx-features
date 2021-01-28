@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Created by Lightning App Builder</description>
-    <flexiPage>ESXX_Features</flexiPage>
-    <label>ESXX Features</label>
+    <flexiPage>ES2021_ES12</flexiPage>
+    <label>ES2021 (ES12)</label>
     <motif>Custom15: People</motif>
 </CustomTab>

@@ -13,4 +13,8 @@ export default class Trim extends LightningElement {
     console.log(greeting.trimEnd());
     // expected output: "   Codey and Cloudy are best friends!";
   }
+
+  get code() {
+    return this.trim.toString();
+  }
 }

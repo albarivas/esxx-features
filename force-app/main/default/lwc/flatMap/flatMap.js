@@ -7,4 +7,8 @@ export default class FlatMap extends LightningElement {
     console.log(arr1.flatMap((x) => [x, x.toUpperCase()]));
     // expected output: ["Astro","ASTRO","Codey","CODEY",Appy","APPY"]
   }
+
+  get code() {
+    return this.flatMap.toString();
+  }
 }

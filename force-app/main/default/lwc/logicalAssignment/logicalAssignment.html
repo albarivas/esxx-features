@@ -1,0 +1,19 @@
+<template>
+  <c-feature-container
+    feature="Logical Assignment Operators - ES2021 (ES12)"
+    code={code}
+    onclick={logicalAssignment}
+    warning="We don't provide a pollyfil for this feature"
+  >
+    <!-- prettier-ignore -->
+    <p>
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"
+      target="_blank">logical OR assignment (x ||= y) operator</a> only assigns if x is falsy.
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment"
+      target="_blank">logical AND assignment (x &&= y) operator</a> only assigns if x is truthy.
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment"
+      target="_blank">logical nullish assignment (x ??= y) operator</a> only assigns if x is nullish (null or undefined).
+      Open <strong>logicalAssignment.js</strong> on the developer tools to check how they work.
+  </p>
+  </c-feature-container>
+</template>

@@ -1,0 +1,16 @@
+<template>
+  <c-feature-container
+    feature="Finalizers - ES2021 (ES12)"
+    code={code}
+    onclick={finalizers}
+    warning="We don't provide a pollyfil for this feature"
+  >
+    <!-- prettier-ignore -->
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry"
+      target="_blank">FinalizationRegistry</a> provides a way to request that a cleanup callback get called at some 
+      point when an object registered with the registry has been reclaimed (garbage-collected).
+      Open <strong>finalizers.js</strong> on the developer tools to check how it works.
+  </p>
+  </c-feature-container>
+</template>

@@ -10,4 +10,8 @@ export default class CatchBinding extends LightningElement {
       // expected output: error - Codey couldn't play the guitar
     }
   }
+
+  get code() {
+    return this.catchBinding.toString();
+  }
 }

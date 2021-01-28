@@ -18,4 +18,8 @@ export default class MatchAll extends LightningElement {
       ]
     */
   }
+
+  get code() {
+    return this.matchAll.toString();
+  }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
@@ -10,7 +10,10 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>ESXX Features</label>
     <navType>Standard</navType>
-    <tabs>ESXX_Features</tabs>
+    <tabs>ES2021_ES12</tabs>
+    <tabs>ES2020_ES11</tabs>
+    <tabs>ES2019_ES10</tabs>
+    <tabs>ES2018_ES9</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>ESXX_Features_UtilityBar</utilityBar>
 </CustomApplication>

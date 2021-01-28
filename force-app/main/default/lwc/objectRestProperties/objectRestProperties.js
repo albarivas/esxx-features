@@ -16,4 +16,8 @@ export default class ObjectRestProperties extends LightningElement {
     console.log(newAstro);
     // expected output: Object { age: 5, hobby: "tennis" }
   }
+
+  get code() {
+    return this.objectRestProperties.toString();
+  }
 }

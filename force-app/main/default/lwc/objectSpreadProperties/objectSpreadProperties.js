@@ -9,4 +9,8 @@ export default class ObjectSpreadProperties extends LightningElement {
     console.log(newAstro);
     // expected output: Object {name: "Astro", age: 5, hobby: "biking"}
   }
+
+  get code() {
+    return this.objectSpreadProperties.toString();
+  }
 }

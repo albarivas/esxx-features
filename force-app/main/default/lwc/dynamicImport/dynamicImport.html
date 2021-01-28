@@ -1,0 +1,17 @@
+<template>
+  <c-feature-container
+    feature="Dynamic Import - ES2020 (ES11)"
+    code={code}
+    onclick={dynamicImport}
+    warning="We don't transpile this syntax feature"
+  >
+    <!-- prettier-ignore -->
+    <p>
+        The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading"
+          target="_blank">dynamic import functionality</a> allows you to call import() as a function, 
+          passing it the path to the module as a parameter. It returns a Promise, which fulfills with a module object
+          giving you access to that object's exports.
+          Open <strong>dynamicImport.js</strong> on the developer tools to check how it works.
+      </p>
+  </c-feature-container>
+</template>

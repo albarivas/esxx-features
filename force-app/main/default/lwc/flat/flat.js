@@ -12,4 +12,8 @@ export default class Flat extends LightningElement {
     console.log(arr2.flat(1));
     // expected output: ["Astro", "Codey", ["Appy", "Cloudy"]]
   }
+
+  get code() {
+    return this.flat.toString();
+  }
 }

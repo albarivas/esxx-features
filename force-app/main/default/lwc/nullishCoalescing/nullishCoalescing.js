@@ -12,4 +12,8 @@ export default class NullishCoalescing extends LightningElement {
     console.log(singingAbilities);
     // expected output: "Astro doesn't know how to sing"
   }
+
+  get code() {
+    return this.nullishCoalescing.toString();
+  }
 }

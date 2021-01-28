@@ -8,4 +8,8 @@ export default class OptionalChaining extends LightningElement {
     console.log(favouriteSong);
     // expected output: undefined (instead of error)
   }
+
+  get code() {
+    return this.optionalChaining.toString();
+  }
 }
