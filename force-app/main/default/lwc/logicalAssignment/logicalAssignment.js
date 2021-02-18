@@ -16,24 +16,26 @@ export default class LogicalAssignment extends LightningElement {
     // expected output: 6
 
     // Logical AND Assignment
+    let cloudyAge = 5;
+    let appyAge = undefined;
 
-    astroAge &&= 6;
-    console.log(astroAge);
+    cloudyAge &&= 6;
+    console.log(cloudyAge);
     // expected output: 6
 
-    codeyAge &&= 6;
-    console.log(codeyAge);
+    appyAge &&= 6;
+    console.log(appyAge);
     // expected output: undefined
 
     // Logical nullish Assignment
     const mascot = { name: "Astro" };
 
     mascot.name ??= "Codey";
-    console.log(a.name);
+    console.log(mascot.name);
     // expected output: "Astro"
 
-    a.age ??= 5;
-    console.log(a.age);
+    mascot.age ??= 5;
+    console.log(mascot.age);
     // expected output: 5*/
   }
 

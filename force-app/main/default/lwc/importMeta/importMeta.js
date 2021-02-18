@@ -3,12 +3,15 @@ import { LightningElement } from "lwc";
 export default class ImportMeta extends LightningElement {
   importMeta() {
     /* NOT WORKING ON PLATFORM
-      console.log(import.meta);
-      // expected output: module information
+      console.log(import.meta.url);
+      // expected output: module location
       */
   }
 
   get code() {
-    return this.importMeta.toString();
+    return `importMeta() {
+      console.log(import.meta.url);
+      // expected output: module location
+    }`;
   }
 }
