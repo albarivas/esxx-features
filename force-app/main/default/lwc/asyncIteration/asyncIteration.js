@@ -3,7 +3,7 @@ import { LightningElement } from "lwc";
 export default class AsyncIteration extends LightningElement {
   async asyncIteration() {
       async function* fetchLwcRecipesCommits(repo) {
-        let url = "https://api.github.com/repos/lwc-recipes/commits";
+        let url = "https://api.github.com/trailheadapps/repos/lwc-recipes/commits";
       
         while (url) {
           // GitHub API responds with a JSON of 30 commits
@@ -14,7 +14,7 @@ export default class AsyncIteration extends LightningElement {
       
           // Extract URL for the next page
           let nextPage = response.headers.get('Link').match(/<(.*?)>; rel="next"/);
-          url = (nextPage !== undefined) ? nextPage[1] : undefined;
+          url = (nextPage) ? nextPage[1] : undefined;
 
           for(let commit of body) { //Yield commits one by one, until the page ends
             yield commit;
@@ -80,7 +80,7 @@ export default class AsyncIteration extends LightningElement {
 
   get code() {
     return `async function* fetchLwcRecipesCommits(repo) {
-      let url = "https://api.github.com/repos/lwc-recipes/commits";
+      let url = "https://api.github.com/repos/trailheadapps/lwc-recipes/commits";
     
       while (url) {
         // GitHub API responds with a JSON of 30 commits
@@ -91,7 +91,7 @@ export default class AsyncIteration extends LightningElement {
     
         // Extract URL for the next page
         let nextPage = response.headers.get('Link').match(/<(.*?)>; rel="next"/);
-        url = (nextPage !== undefined) ? nextPage[1] : undefined;
+        url = (nextPage) ? nextPage[1] : undefined;
 
         for(let commit of body) { //Yield commits one by one, until the page ends
           yield commit;
