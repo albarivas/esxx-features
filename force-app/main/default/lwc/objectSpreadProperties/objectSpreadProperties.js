@@ -8,6 +8,33 @@ export default class ObjectSpreadProperties extends LightningElement {
 
     console.log(newAstro);
     // expected output: Object {name: "Astro", age: 5, hobby: "biking"}
+
+  /* 
+    // Spread Syntax (ES6)
+
+    const mascot1 = "Astro";
+    const mascot2 = "Codey";
+    const rest = ["Appy", "Blaze"];
+    const mascots = [mascot1, mascot2, ...rest];
+    console.log(mascots)
+
+    // expected output: ["Astro", "Codey", "Appy", "Blaze"]
+  */
+
+  /* 
+    // Spread Syntax in Function Parameters (ES6)
+
+    const mascot1 = "Astro";
+    const mascot2 = "Codey";
+    const rest = ["Appy", "Blaze"];
+
+    const print = (m1, m2, m3, m4) => {
+      console.log(`${m1}, ${m2}, ${m3} and ${m4} went to the cinema`);
+    }
+
+    print(mascot1, mascot2, ...rest);
+    // expected output: Astro, Codey, Appy and Blaze went to the cinema
+  */
   }
 
   get code() {

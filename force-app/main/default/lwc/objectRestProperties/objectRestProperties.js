@@ -15,6 +15,17 @@ export default class ObjectRestProperties extends LightningElement {
 
     console.log(newAstro);
     // expected output: Object { age: 5, hobby: "tennis" }
+
+  /* 
+    // Destructuring Assignment (ES6)
+
+    let mascot1, mascot2, rest;
+    [mascot1, mascot2, ...rest] = ["Astro", "Codey", "Appy", "Blaze"];
+    console.log(rest)
+
+    // expected output: ["Appy", "Blaze"]
+  */
+
   }
 
   get code() {

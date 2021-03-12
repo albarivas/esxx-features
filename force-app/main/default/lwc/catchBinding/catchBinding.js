@@ -12,6 +12,14 @@ export default class CatchBinding extends LightningElement {
   }
 
   get code() {
-    return this.catchBinding.toString();
+    return `catchBinding() {
+      const codey = {};
+      try {
+        codey.playGuitar();
+      } catch {
+        console.error("Codey couldn't play the guitar");
+        // expected output: error - Codey couldn't play the guitar
+      }
+    }`;
   }
 }
