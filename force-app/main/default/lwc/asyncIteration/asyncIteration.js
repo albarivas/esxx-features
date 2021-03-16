@@ -3,7 +3,7 @@ import { LightningElement } from "lwc";
 export default class AsyncIteration extends LightningElement {
   async asyncIteration() {
       async function* fetchLwcRecipesCommits(repo) {
-        let url = "https://api.github.com/trailheadapps/repos/lwc-recipes/commits";
+        let url = "https://api.github.com/repos/trailheadapps/lwc-recipes/commits";
       
         while (url) {
           // GitHub API responds with a JSON of 30 commits
@@ -26,7 +26,8 @@ export default class AsyncIteration extends LightningElement {
         console.log(commit.author.login);
       }
 
-    /*
+    /* FOR AWAIT...OF VS PROMISE.ALL() EXAMPLES
+
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
@@ -54,6 +55,11 @@ export default class AsyncIteration extends LightningElement {
       //  Codey arrived in 3000 ms!
       //  Appy arrived in 3000 ms!
       //  These mascots went to the party:Astro,Codey,Appy
+
+      // All the promises happen immediately, all at once. 
+      // Then, they are awaited one after another.
+      // This means errors from promises later in the array can be ignored.
+      // This is a bad practice for iterating over an array of promises.
     */
 
     /*
@@ -69,38 +75,44 @@ export default class AsyncIteration extends LightningElement {
 
       const startTimestamp2 = Date.now();
       const mascots2 = [];
-      for await (const obj of await Promise.all(otherIterables)) {
+      for (const obj of await Promise.all(otherIterables)) {
         console.log(`${obj} arrived in ${Date.now() - startTimestamp2} ms!`);
         mascots2.push(obj);
       }
 
       console.log(`These mascots went to the party:${mascots2.join(',')}`);
+
+      // Promise.all() returns a single Promise that resolves to an array of the results
+      // of the input promises. It rejects immediately upon any of the input promises rejecting.
+      // This is the best practice for iterating over arrays of promises.
     */
   }
 
   get code() {
-    return `async function* fetchLwcRecipesCommits(repo) {
-      let url = "https://api.github.com/repos/trailheadapps/lwc-recipes/commits";
-    
-      while (url) {
-        // GitHub API responds with a JSON of 30 commits
-        // providing a link to the next page in the Link header 
-        const response = await fetch(url);
-    
-        const body = await response.json();
-    
-        // Extract URL for the next page
-        let nextPage = response.headers.get('Link').match(/<(.*?)>; rel="next"/);
-        url = (nextPage) ? nextPage[1] : undefined;
+    return `async asyncIteration() {
+  async function* fetchLwcRecipesCommits(repo) {
+    let url = "https://api.github.com/repos/trailheadapps/lwc-recipes/commits";
+  
+    while (url) {
+      // GitHub API responds with a JSON of 30 commits
+      // providing a link to the next page in the Link header 
+      const response = await fetch(url);
+  
+      const body = await response.json();
+  
+      // Extract URL for the next page
+      let nextPage = response.headers.get('Link').match(/<(.*?)>; rel="next"/);
+      url = (nextPage) ? nextPage[1] : undefined;
 
-        for(let commit of body) { //Yield commits one by one, until the page ends
-          yield commit;
-        }
+      for(let commit of body) { //Yield commits one by one, until the page ends
+        yield commit;
       }
     }
+  }
 
-    for await (const commit of fetchLwcRecipesCommits()) {
-      console.log(commit.author.login);
-    }`
+  for await (const commit of fetchLwcRecipesCommits()) {
+    console.log(commit.author.login);
+  }
+}`;
   }
 }
