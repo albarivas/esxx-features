@@ -25,8 +25,8 @@ export default class SymbolDescription extends LightningElement {
 
   get code() {
     return `symbolDescription() {
-      console.log(Symbol("Codey and Astro went to the party").description);
-      // expected outpu: Codey and Astro went to the party
-    }`;
+  console.log(Symbol("Codey and Astro went to the party").description);
+  // expected outpu: Codey and Astro went to the party
+}`;
   }
 }

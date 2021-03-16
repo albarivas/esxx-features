@@ -22,10 +22,10 @@ export default class FlatMap extends LightningElement {
 
   get code() {
     return `flatMap() {
-      const mascots = ["Astro", "Codey", "Appy"];
-  
-      console.log(mascots.flatMap((x) => [x, x.toUpperCase()]));
-      // expected output: ["Astro","ASTRO","Codey","CODEY",Appy","APPY"]
-    }`;
+  const mascots = ["Astro", "Codey", "Appy"];
+
+  console.log(mascots.flatMap((x) => [x, x.toUpperCase()]));
+  // expected output: ["Astro","ASTRO","Codey","CODEY",Appy","APPY"]
+}`;
   }
 }
