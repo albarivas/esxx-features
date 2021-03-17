@@ -6,6 +6,7 @@ export default class FeatureContainer extends LightningElement {
   @api feature;
   @api warning;
   @api code;
+  @api clickHandler;
   prism;
   prismInitialized;
 
