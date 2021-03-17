@@ -15,7 +15,7 @@ export default class FlatMap extends LightningElement {
       console.log(flattenedMascots);
       // expected output: [["Astro","ASTRO]",["Codey","CODEY"],["Appy","APPY"]]
 
-      console.log(flattenedMascots.flat());
+      console.log(flattenedMascots.flat(1));
       // expected output: ["Astro","ASTRO","Codey","CODEY","Appy","APPY"]
     */
   }

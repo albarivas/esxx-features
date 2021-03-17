@@ -14,8 +14,8 @@ export default class ObjectSpreadProperties extends LightningElement {
 
     const mascot1 = "Astro";
     const mascot2 = "Codey";
-    const rest = ["Appy", "Blaze"];
-    const mascots = [mascot1, mascot2, ...rest];
+    const spread = ["Appy", "Blaze"];
+    const mascots = [mascot1, mascot2, ...spread];
     console.log(mascots)
 
     // expected output: ["Astro", "Codey", "Appy", "Blaze"]
@@ -26,13 +26,13 @@ export default class ObjectSpreadProperties extends LightningElement {
 
     const mascot1 = "Astro";
     const mascot2 = "Codey";
-    const rest = ["Appy", "Blaze"];
+    const spread = ["Appy", "Blaze"];
 
     const print = (m1, m2, m3, m4) => {
       console.log(`${m1}, ${m2}, ${m3} and ${m4} went to the cinema`);
     }
 
-    print(mascot1, mascot2, ...rest);
+    print(mascot1, mascot2, ...spread);
     // expected output: Astro, Codey, Appy and Blaze went to the cinema
   */
   }

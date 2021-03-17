@@ -6,9 +6,9 @@ export default class SymbolDescription extends LightningElement {
     // expected outpu: Codey and Astro went to the party
 
   /*
-    // Symbol (ES6) - primitive used to identify object properties (avoid name clashing)
+    // Symbol (ES6) - new primitive. Each symbol is unique.
+    // Used for private properties, hidden metadata, constants...
 
-    // Each Symbol is unique
     console.log(Symbol() === Symbol());
     // expected output: false
 
@@ -16,11 +16,13 @@ export default class SymbolDescription extends LightningElement {
     const mascot = {
       [name]: 'Astro'
     }
-    console.log(Object.keys(mascot));
-    // expected output: []
 
-    console.log(Object.getOwnPropertySymbols(mascot));
-    // expected output: [Symbol()]
+    console.log(mascot[name]);
+    // expected output: Astro
+
+    console.log(mascot.name);
+    // expected output: undefined
+
   */
   }
 
