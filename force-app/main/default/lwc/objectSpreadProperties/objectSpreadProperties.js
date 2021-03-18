@@ -12,13 +12,13 @@ export default class ObjectSpreadProperties extends LightningElement {
   /* 
     // Spread Syntax (ES6)
 
-    const mascot1 = "Astro";
-    const mascot2 = "Codey";
-    const spread = ["Appy", "Blaze"];
-    const mascots = [mascot1, mascot2, ...spread];
-    console.log(mascots)
+const mascotA = "Astro";
+const mascotB = "Codey";
+const spread = ["Appy", "Blaze"];
+const mascots = [mascotA, mascotB, ...spread];
+console.log(mascots)
 
-    // expected output: ["Astro", "Codey", "Appy", "Blaze"]
+// expected output: ["Astro", "Codey", "Appy", "Blaze"]
   */
 
   /* 

@@ -8,15 +8,15 @@ export default class FlatMap extends LightningElement {
     // expected output: ["Astro","ASTRO","Codey","CODEY",Appy","APPY"]
 
     /* 
-      const mascots = ["Astro", "Codey", "Appy"];
+const mascots = ["Astro", "Codey", "Appy"];
 
-      const flattenedMascots = mascots.map((x) => [x, x.toUpperCase()]);
+const flattenedMascots = mascots.map((x) => [x, x.toUpperCase()]);
 
-      console.log(flattenedMascots);
-      // expected output: [["Astro","ASTRO]",["Codey","CODEY"],["Appy","APPY"]]
+console.log(flattenedMascots);
+// expected output: [["Astro","ASTRO]",["Codey","CODEY"],["Appy","APPY"]]
 
-      console.log(flattenedMascots.flat(1));
-      // expected output: ["Astro","ASTRO","Codey","CODEY","Appy","APPY"]
+console.log(flattenedMascots.flat(1));
+// expected output: ["Astro","ASTRO","Codey","CODEY","Appy","APPY"]
     */
   }
 
