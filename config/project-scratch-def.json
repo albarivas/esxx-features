@@ -8,7 +8,6 @@
     },
     "securitySettings": {
       "passwordPolicies": {
-        "enableSetPasswordInApi": true
       }
     },
     "mobileSettings": {
