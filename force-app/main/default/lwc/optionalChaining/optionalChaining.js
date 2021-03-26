@@ -10,6 +10,12 @@ export default class OptionalChaining extends LightningElement {
   }
 
   get code() {
-    return this.optionalChaining.toString();
+    return `optionalChaining() {
+      const astro = { dancing: "Astro dances Salsa" };
+  
+      const favouriteSong = astro.singing?.favouriteSong;
+      console.log(favouriteSong);
+      // expected output: undefined (instead of error)
+    }`;
   }
 }

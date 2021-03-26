@@ -7,6 +7,8 @@ export default class ModuleExports extends LightningElement {
   }
 
   get code() {
-    return this.moduleExports.toString();
+    return `moduleExports() {
+      utils.dance("Astro", "rock");
+    }`;
   }
 }
