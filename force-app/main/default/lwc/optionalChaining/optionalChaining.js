@@ -26,11 +26,15 @@ console.log(favouriteDancingSong);
 
   get code() {
     return `optionalChaining() {
-  const astro = { dancing: "Astro dances Salsa" };
+      const astro = { dancing: {favouriteSong : "Bohemian Rapsody"} };
 
-  const favouriteSong = astro.singing?.favouriteSong;
-  console.log(favouriteSong);
-  // expected output: undefined (instead of error)
+      const favouriteDancingSong = astro.dancing?.favouriteSong;
+      console.log(favouriteDancingSong);
+      // expected output: "Bohemian Rapsody"
+
+      const favouriteSingingSong = astro.singing?.favouriteSong;
+      console.log(favouriteSingingSong);
+      // expected output: undefined (instead of error)
 }`;
   }
 }
